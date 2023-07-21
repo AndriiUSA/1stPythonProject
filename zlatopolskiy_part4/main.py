@@ -68,6 +68,13 @@
 #     m = n + 2
 #     print(m)
 
-
-
-# ergbrtf
+# 4.25. Дано двузначное число. Определить какая из его цифр больше:
+# number = input('Type two characters number: ')
+# a = int(number[0])
+# b = int(number[1])
+# if a == b:
+#     print('Characters same')
+# elif a > b:
+#     print('First character greater')
+# else:
+#     print('Second character greater')
