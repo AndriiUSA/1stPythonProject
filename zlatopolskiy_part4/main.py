@@ -42,22 +42,20 @@
 # 4.20*. Даны два прямоугольника, стороны которых параллельны или перпендикулярны осям координат.
 # Известны координаты левого нижнего и правого нижнего углов каждого из них. Найти координаты левого нижнего и
 # правого верхнего углов минимального прямоугольника, содержащего указанные прямоугольники.
-# a_x = int(input('Type Ax(first square): '))
-# a_y = int(input('Type Ay(first square): '))
-# b_x = int(input(f'Type Bx(first square) (more then {a_x}): '))
-# print(f'By:{a_y}')
-# y_side_1 = int(input('Type AD side (first square) light parallel Y axis: '))
-# d_y = a_y + y_side_1
-# e_x = int(input('Type Ex(second square): '))
-# e_y = int(input('Type Ey(second square): '))
-# f_x = int(input(f'Type Fx(second square) (more then {e_x}): '))
-# print(f'Fy:{e_y}')
-# y_side_2 = int(input('Type EH side (second square) light parallel Y axis: '))
-# h_y = e_y + y_side_2
-# if y_side_1 < y_side_2:
-#     print(f'(First square coordinates Ax:{a_x};Ay:{a_y}. Bx:{b_x};By{a_y}. Cx:{b_x};Cy:{y_side_1}. Dx:{a_x},Dy{y_side_1}.')
-# else:
-#     print(f'(Second square coordinates Ex:{e_x};Ey:{e_y}. Fx:{f_x};Fy{e_y}. Gx:{f_x};Gy:{y_side_2}. Hx:{e_x},Hy{y_side_2}.')
+first_left_bottom_X = int(input('Type first left bottom square X coordinate: '))
+first_left_bottom_Y = int(input('Type first left bottom square Y coordinate: '))
+first_right_top_X = int(input(f'Type first right top square X coordinate more then {first_left_bottom_X}: '))
+first_right_top_Y = int(input(f'Type first right top square Y coordinate more then {first_left_bottom_Y}: '))
+
+second_left_bottom_X = int(input('Type second left bottom square X coordinate: '))
+second_left_bottom_Y = int(input('Type second left bottom square Y coordinate: '))
+second_right_top_X = int(input(f'Type second right top square X coordinate more then {second_left_bottom_X}: '))
+second_right_top_Y = int(input(f'Type second right top square Y coordinate coordinate more then {second_left_bottom_Y}: '))
+
+if y_side_1 < y_side_2:
+    print(f'(First square coordinates Ax:{a_x};Ay:{a_y}. Bx:{b_x};By{a_y}. Cx:{b_x};Cy:{y_side_1}. Dx:{a_x},Dy{y_side_1}.')
+else:
+    print(f'(Second square coordinates Ex:{e_x};Ey:{e_y}. Fx:{f_x};Fy{e_y}. Gx:{f_x};Gy:{y_side_2}. Hx:{e_x},Hy{y_side_2}.')
 
 # 4.25. Дано целое число n. Вывести на экран следующее за ним четное число.
 # n = int(input('Type integer n: '))
@@ -68,7 +66,7 @@
 #     m = n + 2
 #     print(m)
 
-# 4.25. Дано двузначное число. Определить какая из его цифр больше:
+# # 4.25. Дано двузначное число. Определить какая из его цифр больше:
 # number = input('Type two characters number: ')
 # a = int(number[0])
 # b = int(number[1])
