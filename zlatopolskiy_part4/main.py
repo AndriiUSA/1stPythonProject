@@ -40,7 +40,7 @@
 #     print('Nothing fit nothing')
 
 # 4.20*. Даны два прямоугольника, стороны которых параллельны или перпендикулярны осям координат.
-# Известны координаты левого нижнего и правого нижнего углов каждого из них. Найти координаты левого нижнего и
+# Известны координаты левого нижнего и правого ерхнего углов каждого из них. Найти координаты левого нижнего и
 # правого верхнего углов минимального прямоугольника, содержащего указанные прямоугольники.
 first_left_bottom_X = int(input('Type first left bottom square X coordinate: '))
 first_left_bottom_Y = int(input('Type first left bottom square Y coordinate: '))
@@ -52,10 +52,25 @@ second_left_bottom_Y = int(input('Type second left bottom square Y coordinate: '
 second_right_top_X = int(input(f'Type second right top square X coordinate more then {second_left_bottom_X}: '))
 second_right_top_Y = int(input(f'Type second right top square Y coordinate coordinate more then {second_left_bottom_Y}: '))
 
-if y_side_1 < y_side_2:
-    print(f'(First square coordinates Ax:{a_x};Ay:{a_y}. Bx:{b_x};By{a_y}. Cx:{b_x};Cy:{y_side_1}. Dx:{a_x},Dy{y_side_1}.')
+# Left smallest X and Y coordinate
+if first_left_bottom_X < second_left_bottom_X:
+    print(f'Min Left bottom X Coordinate: {first_left_bottom_X}')
 else:
-    print(f'(Second square coordinates Ex:{e_x};Ey:{e_y}. Fx:{f_x};Fy{e_y}. Gx:{f_x};Gy:{y_side_2}. Hx:{e_x},Hy{y_side_2}.')
+    print(f'Min Left bottom X Coordinate: {second_left_bottom_X}')
+if first_left_bottom_Y < second_left_bottom_Y:
+    print(f'Min Left bottom Y Coordinate: {first_left_bottom_Y}')
+else:
+    print(f'Min Left bottom Y Coordinate: {second_left_bottom_Y}')
+
+# Right smallest X and Y coordinate
+if first_right_top_X < second_right_top_X:
+    print(f'Min Right top X Coordinate: {first_right_top_X}')
+else:
+    print(f'Min Right top X Coordinate: {second_right_top_X}')
+if first_right_top_Y < second_right_top_Y:
+    print(f'Min Right top Y Coordinate: {first_right_top_Y}')
+else:
+    print(f'Min Right top X Coordinate: {second_right_top_Y}')
 
 # 4.25. Дано целое число n. Вывести на экран следующее за ним четное число.
 # n = int(input('Type integer n: '))
