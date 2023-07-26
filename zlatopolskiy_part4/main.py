@@ -70,7 +70,7 @@ else:
 if first_right_top_Y < second_right_top_Y:
     print(f'Min Right top Y Coordinate: {first_right_top_Y}')
 else:
-    print(f'Min Right top X Coordinate: {second_right_top_Y}')
+    print(f'Min Right top Y Coordinate: {second_right_top_Y}')
 
 # 4.25. Дано целое число n. Вывести на экран следующее за ним четное число.
 # n = int(input('Type integer n: '))
