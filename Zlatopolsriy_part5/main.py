@@ -84,9 +84,36 @@
 # print(product_of_numbers)
 
 # 5.30. Найти: а) сумму кубов всех целых чисел от 25 до 40;
-sum_of_cube = 0
-for n in range(25,40):
-    cube = n**3
-    sum_of_cube += cube
-    print(cube)
-print(sum_of_cube)
+# sum_of_cube = 0
+# for n in range(25,40):
+#     cube = n**3
+#     sum_of_cube += cube
+#     print(cube)
+# print(sum_of_cube)
+
+# Начав тренировки, лыжник в первый день пробежал 10 км. Каждый следующий день он увеличивал пробег на 10 % от пробега
+# предыдущего дня. Определить: а) пробег лыжника за второй, третий, ..., десятый день тренировок;
+# first_day = 10
+# next_day = first_day
+# n = 2
+# result = first_day
+# while n <= 10:
+#     next_day += (next_day * 0.1)  # Increasing the distance by 10% each day
+#     result += next_day
+#     print(f"Day {n}: {next_day:.2f} km")
+#     n += 1
+
+# 5.49. Гражданин 1 марта открыл счет в банке, вложив 1000 usd. Через каждый месяц размер вклада увеличивается
+# на 2 % от имеющейся суммы. Определить: а) прирост суммы вклада за первый, второй, ..., десятый месяц;
+# б) сумму вклада через три, четыре, ..., двенадцать месяцев.
+
+zero_month = 1000
+next_month = zero_month
+month = 1
+result = zero_month
+while month <= 10:
+    next_month +=(next_month * 0.2)
+    result += next_month
+    incr_depos = next_month - zero_month
+    print(f'Mont {month}- increase in the amount of the deposit: {incr_depos:.2f} usd; full deposit: {next_month:.2f} usd')
+    month += 1
