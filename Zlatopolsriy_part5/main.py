@@ -106,14 +106,43 @@
 # 5.49. Гражданин 1 марта открыл счет в банке, вложив 1000 usd. Через каждый месяц размер вклада увеличивается
 # на 2 % от имеющейся суммы. Определить: а) прирост суммы вклада за первый, второй, ..., десятый месяц;
 # б) сумму вклада через три, четыре, ..., двенадцать месяцев.
+# zero_month = 1000
+# next_month = zero_month
+# month = 1
+# result = zero_month
+# while month <= 10:
+#     next_month +=(next_month * 0.2)
+#     result += next_month
+#     incr_depos = next_month - zero_month
+#     print(f'Mont {month}- increase in the amount of the deposit: {incr_depos:.2f} usd; full deposit: {next_month:.2f} usd')
+#     month += 1
 
-zero_month = 1000
-next_month = zero_month
-month = 1
-result = zero_month
-while month <= 10:
-    next_month +=(next_month * 0.2)
-    result += next_month
-    incr_depos = next_month - zero_month
-    print(f'Mont {month}- increase in the amount of the deposit: {incr_depos:.2f} usd; full deposit: {next_month:.2f} usd')
-    month += 1
+# # Print all even numbers from 1 to 20 with for
+# for n in range(1,21):
+#     if n % 2 == 0:
+#         print(n)
+#
+# # with while
+# n = 1
+# while n <= 20:
+#     if n % 2 == 0:
+#         print(n)
+#     n +=1
+
+# Print the sum of all odd numbers from 1 to 100
+# sum = 0
+# for i in range(1,100,2):
+#     sum = sum + i
+# print(sum)
+#
+# Find the product of all prime numbers from 1 to 50.---
+# prod = 1
+# for i in range(1,51):
+#     prod = prod * i
+# print(prod)
+
+# Given a list of integers, find and print all the numbers that are divisible by both 3 and 5.
+list = [152, 58, 65, 85, 4, 55, 9, 27, 99, 15]
+for i in list:
+    if i % 3 == 0 and i % 5 == 0:
+        print(i)
