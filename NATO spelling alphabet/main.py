@@ -1,4 +1,4 @@
-dict = {
+dictionary = {
     "A": "Alpha",
     "B": "Bravo",
     "C": "Charlie",
@@ -24,21 +24,30 @@ dict = {
     "W": "Whiskey",
     "X": "X-ray",
     "Y": "Yankee",
-    "Z": "Zulu"
+    "Z": "Zulu",
+    "1": "One",
+    "2": "Two",
+    "3": "Three",
+    "4": "Four",
+    "5": "Five",
+    "6": "Six",
+    "7": "Seven",
+    "8": "Eight",
+    "9": "Nine",
+    "0": "Zero"
 }
 
-letter_low = input("Write Letters or World what you need to pronounce:")
-letter_upper = letter_low.upper()
-letter_count = len(letter_upper)
+word = input("Enter a word to pronounce:").upper()
+word_phonetic = []
 
-print(letter_count)
+for letter in word:
+    if letter in dictionary:
+        phonetic_value = dictionary[letter]
+        word_phonetic.append(phonetic_value)
 
-for i in range(letter_count):
-    if letter_upper in dict:
-        value = dict[letter_upper]
-        print(f"The value for {letter_low} is {value}")
+if word_phonetic:
+    word_phonetic_str = ', '.join(word_phonetic)
+    print(f"The phonetic representation is: {word_phonetic_str}")
+else:
+    print(f"Sorry, some letters in the word are not in the dictionary.")
 
-
-
-# else:
-#     print(f"{key_to_find} not found in the dictionary")
