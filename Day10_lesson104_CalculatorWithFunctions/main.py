@@ -17,19 +17,26 @@ operations = {
     "*": mult,
     "/": dev
 }
-num1 = int(input("What's is first number?"))
-for symbol in operations:
-    print(symbol)
-operations_symbol = input("Pick an operation from the line above: ")
-num2 = int(input("What's is second number?"))
-calculation_function = operations[operations_symbol]
-first_answer = calculation_function(num1, num2)
 
-print(f"{num1} {operations_symbol} {num2} = {first_answer}")
+def calculator():
+    num1 = float(input("What's is first number?"))
+    for symbol in operations:
+        print(symbol)
+    should_continiue = True
 
-operations_symbol = input("Pick another operation: ")
-num3 = int(input("What's the next number?"))
-calculation_function = operations[operations_symbol]
-second_answer = calculation_function(first_answer, num3)
+    while should_continiue:
+        operations_symbol = input("Pick an operation: ")
+        num2 = float(input("What's is next number?"))
+        calculation_function = operations[operations_symbol]
+        answer = calculation_function(num1, num2)
 
-print(f"{first_answer} {operations_symbol} {num3} = {second_answer}")
+        print(f"{num1} {operations_symbol} {num2} = {answer}")
+        cycle = input(f"Type 'y' to continue to calculation with {answer}, or type 'c' to new calc, or press anything else to exit.: ")
+        if cycle == "y":
+            num1 = answer
+        elif cycle == "c":
+            should_continiue = False
+            calculator()
+        else:
+            should_continiue = False
+calculator()
